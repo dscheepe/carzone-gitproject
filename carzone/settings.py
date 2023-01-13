@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -117,6 +118,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') 
+# Bepaal de rootlocatie van de statische file
+# BASE_DIR is bovenaan aangemaakt voor de folder te bepalen
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'carzone/static'),
+    #de statische dirs bevinden zich in de base dir onder carzone / Static
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
