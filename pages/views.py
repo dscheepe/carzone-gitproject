@@ -9,3 +9,12 @@ def home(request):
     # gaat de template in pages/home.html renderen
     # Maak eerst een template aan
     # Creeer de folder pages en file home.html
+def about(request):
+    return render(request, 'pages/about.html')
+
+def services(request):
+    return render(request,'pages/services.html' )
+
+def contact(request):
+    return render(request, 'pages/contact.html')
+

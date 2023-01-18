@@ -5,6 +5,9 @@ urlpatterns = [
     path('', views.home, name='home'),
     # '' is de homepage
     # views.home gaat in views zoeken naar de functie home
-    # de naam voor deze opo te roepen is home
+    # de naam voor deze op te roepen is home
     # Volgende stap maak in views.py de functie home
+    path('about', views.about, name='about'),
+    path('services', views.services, name='services'),
+    path('contact', views.contact, name='contact'),
 ]
